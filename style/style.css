@@ -215,7 +215,7 @@ section .banner .des h1 {
   font-weight: bold;
   color: white;
   font-size: 85px;
-  text-shadow: .5px 2px 5px #4b4b4b;
+  text-shadow: .5px 2px 5px #b1b1b1;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
@@ -348,7 +348,6 @@ section .banner .des h2 {
   section .banner .des h1 {
     font-family: Arial;
     font-weight: bold;
-    color: #656786;
     font-size: 35px;
     text-align: center;
   }
@@ -361,6 +360,14 @@ section .banner .des h2 {
 section .banner .des:hover {
   background-color: #fbfbfb;
   border-radius: 1rem 5rem;
+}
+
+section .banner .des:hover h1 {
+  color: #1a1c20;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 @media screen and (max-width: 550px) {
@@ -395,18 +402,10 @@ section .projects h1 {
 }
 
 section .projects .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 }
 
 section .projects .cards a {
@@ -477,10 +476,12 @@ section .projects .cards a .cont ul li {
   list-style: none;
   background-color: #656786;
   color: #eeeff1;
+  font-family: sans-serif;
+  font-weight: 600;
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,12 +492,16 @@ section .projects .cards a .cont ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section .projects .cards a .cont ul li i {
   color: #eeeff1;
-  font-size: 20px;
+  font-size: 17px;
   padding-left: 5px;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 550px) {
@@ -554,6 +559,26 @@ section .projects .cards .lightbox span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media screen and (max-width: 550px) {
+  section .projects .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 section .about {
