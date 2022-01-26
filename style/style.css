@@ -164,8 +164,9 @@ header nav ul li a:active {
 }
 
 section .banner {
-  background-image: -webkit-gradient(linear, left top, right top, from(#eeeff1), to(#B2AFDB));
-  background-image: linear-gradient(to right, #eeeff1, #B2AFDB);
+  background: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 1500px 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,18 +198,24 @@ section .banner img {
 }
 
 section .banner .des {
+  background: rgba(255, 255, 255, 0.295);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 2rem;
-  border: 5px solid #B2AFDB;
-  border-radius: .5rem;
-  background-color: #fbfbfb;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 section .banner .des h1 {
   font-family: Arial;
   font-weight: bold;
-  color: #656786;
+  color: white;
   font-size: 85px;
-  text-shadow: .5px .5px 3px #4b4b4b;
+  text-shadow: .5px 2px 5px #4b4b4b;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
@@ -233,6 +240,7 @@ section .banner .des .top-socials li {
 section .banner .des .top-socials li a {
   color: #1a1c20;
   font-size: 1.2rem;
+  text-shadow: .5px .5px 2px #4b4b4b;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -252,15 +260,15 @@ section .banner .des .top-socials li a:hover {
 section .banner .des .hireme {
   padding: 1rem 2rem;
   border-style: none;
-  background-color: #656786;
+  background-color: #1a1c20;
   color: #eeeff1;
   font-family: "montserrat";
   font-size: 1rem;
   font-weight: 600;
   border-radius: .5rem;
   margin: 1rem 0 1rem 0;
-  -webkit-box-shadow: .2px .2px 3px;
-          box-shadow: .2px .2px 3px;
+  -webkit-box-shadow: .2px 1px 4px;
+          box-shadow: .2px 1px 4px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -287,6 +295,7 @@ section .banner .des h2 {
           animation-name: slide-ui;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
+  text-shadow: .5px .5px 2px #4b4b4b;
 }
 
 @-webkit-keyframes slide-ui {
@@ -349,6 +358,11 @@ section .banner .des h2 {
   }
 }
 
+section .banner .des:hover {
+  background-color: #fbfbfb;
+  border-radius: 1rem 5rem;
+}
+
 @media screen and (max-width: 550px) {
   section .banner {
     padding-top: 0;
@@ -381,10 +395,18 @@ section .projects h1 {
 }
 
 section .projects .cards {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section .projects .cards a {
@@ -532,54 +554,6 @@ section .projects .cards .lightbox span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-section .projects .cards .item1 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-section .projects .cards .item2 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-section .projects .cards .item3 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
-}
-
-section .projects .cards .item4 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-}
-
-section .projects .cards .item5 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-}
-
-section .projects .cards .item6 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
-
-@media only screen and (max-width: 1200px) {
-  section .projects .cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 section .about {
