@@ -4,8 +4,8 @@ $lilac1: #656786;
 $light: #fbfbfb;
 $wb: #B2AFDB;
 $white: #eeeff1;
-$pink: rgb(246, 167, 180);
-$grey: #1a1c20;
+$pink: rgb(240, 148, 163);
+$grey: #494c52;
 
 $logo: "Parisienne";
 $font: Arial;
@@ -168,24 +168,26 @@ section {
 
     .banner {
         background: url(../images/bg.jpg);
-        background-repeat: no-repeat;
-        background-size: 1500px 800px;
+        // background-repeat: no-repeat;
+        // background-size: 1500px 800px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
-        padding-top: 7.5rem;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
+        background-size: 100%;
+        background-position: top;
         
         img {
             width: auto;
-            height: 500px;
+            height: 85%;
         }
 
         @media screen and (max-width: 550px) {
             img {
-                height: 420px;
+                height: 70%;
             }
         }
 
@@ -224,7 +226,7 @@ section {
                     a {
                         color: $grey;
                         font-size: 1.2rem;
-                        text-shadow: .5px .5px 2px #4b4b4b;
+                        text-shadow: .5px .5px 1px #4b4b4b;
                         transition: all 0.5s ease-in-out;
                     }
 
@@ -243,14 +245,14 @@ section {
             .hireme {
                 padding: 1rem 2rem;
                 border-style: none;
-                background-color: $grey;
+                background-color: $lilac1;
                 color: $white;
                 font-family: $mont;
                 font-size: 1rem;
                 font-weight: 600;
                 border-radius: .5rem;
                 margin: 1rem 0 1rem 0;
-                box-shadow: .2px 1px 4px;
+                box-shadow: .2px .5px 1px;
                 transition: all 0.5s ease-in-out;
             }
 
@@ -341,11 +343,10 @@ section {
         // display: flex;
         // flex-direction: row;
         // flex-wrap: wrap;
-        // align-items: center;
-        // justify-content: center;
-
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
         // grid-template-columns: 1fr 2fr 1fr;
         // grid-template-columns: repeat(4, 1fr 2fr);
         // grid-template-columns: 70% 30%;
@@ -427,7 +428,8 @@ section {
             }
 
             img {
-                max-width: 250px;
+                max-width: 500px;
+                border-radius: 5px;
             }
 
             @media only screen and (max-width: 550px) {
